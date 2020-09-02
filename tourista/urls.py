@@ -22,7 +22,7 @@ from destinations import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    path('torista/', views.home, name='home-page'),
     path('destinations/list/', views.destination_list, name='destination-list'),
     path('destinations/detail/<int:destination_id>/',
          views.destination_detail, name='destination-detail'),

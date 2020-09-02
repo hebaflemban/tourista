@@ -1,4 +1,4 @@
-<!doctype html> 
+<!doctype html>
 <html lang="en">
 {% load static %}
 
@@ -7,40 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Add a link to the bootstrap CDN here -->
-  
-  
-  <!-- Uncomment the following line to include your custom CSS file -->
-  {% comment %} 
-    <link rel="stylesheet" type="text/css" href="{% static 'custom.css' %}"> 
-  {% endcomment %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@900&display=swap" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Bebas+Neue&family=Roboto+Mono:wght@699&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Bebas+Neue&family=Nunito:wght@200&family=Roboto+Mono:wght@100;699&display=swap" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200&family=Bebas+Neue&family=Nunito:wght@200&family=Roboto+Mono:wght@100;699&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'custom.css' %}">
 
   <title>{% block title %}{% endblock title %}</title>
 </head>
 
-<body>
-  
+
+<body style="background-color:black;" >
+
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="{% url 'destination-list' %}">Tourista</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'destination-create' %}">Add a destination</a>
-        </li>
-      </ul>
-    </div>
+  <nav class="navbar fixed-top navbar-default navbar-expand-lg navbar-dark bg-transparent ">
+    <a class="navbar-brand  " href="{% url 'home-page' %}" style = " font-family: 'Lobster', cursive;"> <i class="fas fa-bug"></i>
+      Tourista
+    </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item text-center">
+            <a class="nav-link" href="{% url 'destination-list' %}" style = " font-family: 'Lobster', cursive;" >Destinations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'destination-create' %}" style = " font-family: 'Lobster', cursive;">Add a destination</a>
+          </li>
+        </ul>
+      </div>
   </nav>
   <!-- End Navbar -->
 
-  <div class="container">
+
+  <div >
     {% block content %} {% endblock content %}
   </div>
 
   <!-- Add your bootstrap script tags here -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
 </body>
 

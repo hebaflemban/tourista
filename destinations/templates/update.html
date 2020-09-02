@@ -4,9 +4,11 @@
 {% block title %}Update{% endblock title %}
 
 {% block content %}
-<form action="{% url 'destination-update' destination_obj.id %}" method="POST" enctype="multipart/form-data">
-  {% csrf_token %}
-  {{form.as_p}}
-  <input type="submit" value="Update">
-</form>
+<div class = "container m-5 text-white "style = "font-family: 'Assistant', sans-serif;font-family: 'Bebas Neue', cursive;font-family: 'Nunito', sans-serif;font-family: 'Roboto Mono', monospace;">
+  <form action="{% url 'destination-update' destination_obj.id %}" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form|crispy}}
+    <input type="submit" class = "btn btn-outline-info" value="Update">
+  </form>
+</div>
 {% endblock content %}
